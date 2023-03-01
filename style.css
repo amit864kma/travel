@@ -1,0 +1,1009 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+    --white: #ddd;
+    --dark: #111;
+    --darkGrey: #474b4f;
+    --lightGrey: #6b6e70;
+    --lightGreen: #86c232;
+    --darkGreen: #61892f;
+    --transition: all 0.5s ease;
+    --skin-color: #f5e3cd;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 15px 0;
+}
+
+.tourism h1,
+.about h1,
+.contact h1,
+.why h1,
+.testimonail h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 3% auto 2%;
+}
+
+/********************** Utility Classes *******************/
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.active {
+    color: var(--lightGreen) !important;
+}
+
+/**************** end of Utility Classes *******************/
+
+/********************** Header styling *********************/
+
+.header {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), center/cover repeat fixed;
+    color: #fff;
+}
+
+.top-nav a {
+    color: #fff;
+}
+
+.brand-and-navBtn {
+    background: #000;
+    position: relative;
+    z-index: 999;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 24px;
+    padding: 15px 25px;
+    color: var(--white);
+}
+
+.brand-name a {
+    letter-spacing: 5px;
+    cursor: pointer;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.brand-name:hover {
+    color: var(--lightGreen);
+}
+
+.navBtn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--white);
+    cursor: pointer;
+}
+
+.navBtn:hover {
+    background: #fff;
+    color: #000;
+    transition: var(--transition);
+}
+
+.top-nav {
+    background: #000;
+    transform: translateY(-600px);
+    transition: var(--transition);
+}
+
+.showNav {
+    transform: translateY(0);
+}
+
+
+.top-nav ul li {
+    padding: 10px 0;
+}
+
+.top-nav ul a {
+    position: relative;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+}
+
+.top-nav a:hover {
+    color: var(--lightGreen);
+}
+
+.top-nav ul a::after {
+    content: "";
+    height: 2px;
+    background: var(--lightGreen);
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    transition: var(--transition);
+}
+
+.top-nav ul a:hover::after {
+    width: 100px;
+}
+
+.about {
+    margin-top: -160px;
+}
+
+.about-content img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+
+.about-img {
+    background: #fff;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.about-content h2 {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 35px;
+    color: var(--lightGreen);
+}
+
+.about-content h3 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 100;
+    background: rgba(255, 255, 255, 0.1);
+    width: 400px;
+    margin: 35px auto;
+    text-align: center;
+}
+
+.blockquote {
+    font-size: 20px;
+    font-weight: 300;
+    opacity: 0.9;
+    width: 60vw;
+    margin: 45px auto 15px auto;
+    text-align: center;
+}
+
+.blockquote span {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: var(--darkGreen);
+    font-weight: 600;
+    letter-spacing: 5px;
+    display: block;
+}
+
+.social-icons {
+    width: 350px;
+    margin: 40px auto 0 auto;
+    padding-bottom: 30px;
+}
+
+.social-icons ul a {
+    color: #fff;
+    font-size: 30px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.social-icons ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-icons ul a:hover {
+    background: var(--lightGreen);
+    border-color: var(--lightGreen);
+}
+
+
+@media screen and (min-width: 992px) {
+
+    /* header & footer */
+    .nav-section {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navBtn {
+        display: none;
+    }
+
+    .brand-and-navBtn {
+        flex: 0 0 10%;
+        background: none;
+    }
+
+    .top-nav {
+        flex: 0 1 80%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        transition: transform 0s ease;
+        transform: translateY(0);
+        background: transparent;
+    }
+
+    .top-nav ul {
+        display: flex;
+    }
+
+    .top-nav ul li {
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+    .about {
+        margin-top: 0;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    /* overall styling */
+    .header {
+        padding-bottom: 30px;
+    }
+
+    .social-icons {
+        display: none;
+    }
+
+    .about-content h3 {
+        width: 100%;
+    }
+
+    .about-content blockquote {
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .subs {
+        width: 280px;
+    }
+
+    .subs i {
+        display: none;
+    }
+
+    .subs input {
+        width: 100%;
+    }
+
+    .subs button {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    h2 {
+        font-size: 30px !important;
+    }
+
+    h3 {
+        font-size: 20px !important;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+}
+
+/********************* End of Header ***********************/
+
+
+.back-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+video {
+    height: 120%;
+    width: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .back-video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .back-video {
+        height: 100%;
+        width: auto;
+    }
+}
+
+.home-about {
+    text-align: center;
+}
+
+.home-about h1 {
+    font-size: 120px;
+    color: var(--white);
+    font-weight: 600;
+}
+
+@media screen and (max-width: 600px) {
+    .home-about h1 {
+        font-size: 100px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .home-about h1 {
+        font-size: 80px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .home-about h1 {
+        font-size: 60px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .home-about h1 {
+        font-size: 50px;
+    }
+}
+
+/* ***********************   TOURISM SECTION START *************************  */
+
+.tourism,
+.about {
+    margin: 4% 8%;
+}
+
+.card-img-top {
+    width: auto;
+    height: 350px;
+}
+
+.card a {
+    text-align: center;
+    font-style: italic;
+    color: var(--dark);
+    list-style: none;
+    text-decoration: none;
+}
+
+.card:hover {
+
+    transform: translateY(15px);
+}
+
+/* ***********************   TOURISM SECTION END     *************************  */
+
+
+
+/* ***********************   ABOUT SECTION START     *************************  */
+.about-info {
+    display: flex;
+}
+
+.about-us {
+    width: 50%;
+}
+
+.about h1 {
+    z-index: 1;
+}
+
+.about-us-img {
+    position: relative;
+    top: -2rem;
+    left: 2rem;
+    width: 500px;
+    height: 400px;
+    z-index: -1;
+    margin: 15px 50px 0 0;
+    border-radius: 20%;
+    /* background-color: var(--skin-color); */
+}
+
+@media screen and (max-width: 900px) {
+    .about-us {
+        width: 70%;
+    }
+
+    .about-us-img {
+        width: 500px;
+        position: relative;
+        left: -2rem;
+        top: 1rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .about-us {
+        width: 50%;
+    }
+
+    .about {
+        margin: 3% 5%;
+    }
+
+    .about-us-img {
+        width: 450px;
+        position: relative;
+        z-index: -1;
+    }
+}
+
+@media screen and (max-width: 725px) {
+    .about-info {
+        display: inline;
+    }
+
+    .about-us {
+        width: 100%;
+        position: relative;
+        top: -5rem;
+    }
+
+    .about-us-img {
+        align-items: center;
+        justify-content: center;
+        margin: 25px 50px 10px;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .about-us-img {
+        width: 330px;
+        list-style: none;
+    }
+
+    .about-us {
+        position: relative;
+        top: -10rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .about-us-img {
+        width: 250px;
+    }
+
+    .about-us p {
+        position: relative;
+        top: -2rem;
+    }
+
+}
+
+/* ***********************   ABOUT SECTION END *************************  */
+
+
+
+/* WHY SECTION START  */
+
+.why {
+    min-height: 70vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url("https://img.freepik.com/free-vector/destination-concept-illustration_114360-453.jpg?size=626&ext=jpg&ga=GA1.2.1206796168.1675606870&semt=sph") center/cover repeat fixed;
+    color: #fff;
+}
+
+.why-info {
+    margin: 3% 8%;
+}
+
+.why-data {
+    text-align: center;
+    position: relative;
+    top: 4rem;
+}
+
+.why-data h1 {
+    color: rgb(231, 130, 6);
+}
+
+/* WHY SECTION END  */
+
+
+/* TESTIMONIALS START  */
+
+#testimonial {
+    width: 100%;
+    padding: 70px 0;
+}
+
+.testimonial-row {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.testimonial-col {
+    flex-basis: 28%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 8px 10px 3px #bcebe0;
+    cursor: pointer;
+}
+
+.testimonial-col p {
+    font-size: 14px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.user img {
+    width: 40px;
+    margin-right: 20px;
+    border-radius: 3px;
+}
+
+.user-info .fa {
+    margin-left: 10px;
+    color: #27c0ff;
+    font-size: 20px;
+}
+
+.user-info small {
+    color: #009688;
+}
+
+.testimonial-col:hover {
+    transform: translateY(-8px);
+}
+
+@media screen and (max-width: 770px) {
+    .testimonial-col {
+        flex-basis: 100%;
+    }
+}
+
+/* TESTIMONIALS CLOSE */
+
+
+/* ***********************   CONTACT US SECTION START *************************  */
+
+
+/* CONTACT US START  */
+
+.contact-form {
+    text-align: center;
+}
+
+label {
+    padding: 7px;
+}
+
+.btn {
+    margin-bottom: 2rem;
+}
+
+
+
+/* ***********************   CONTACT US SECTION END *************************  */
+
+
+
+/* FOOTER SECTION START  */
+
+
+.footer {
+    width: 100%;
+
+    bottom: 0;
+    background: linear-gradient(to right, #00093c, #2d0b00);
+    color: var(--white);
+    padding: 100px 0 30px;
+    border-top-left-radius: 100px;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.rows {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.coln {
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+.coln:nth-child(2),
+.coln:nth-child(3) {
+    flex-basis: 25%;
+}
+
+.logo {
+    width: 80px;
+    margin-bottom: 30px;
+}
+
+.coln h3 {
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.email-id {
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+    text-decoration: none;
+    color: #ccc;
+}
+
+ul li {
+    list-style: none;
+    margin-bottom: 12px;
+
+}
+
+ul li a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.form {
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+
+.form .far {
+    font-size: 18px;
+    margin-right: 10px;
+
+}
+
+.form .input {
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;
+}
+
+.form button {
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.form button .fas {
+    font-size: 16px;
+    color: #ccc;
+}
+
+.social-icons .fabs {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: var(--dark);
+    background: var(--white);
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.amihr {
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+.copyright {
+    text-align: center;
+}
+
+/* FOOTER SECTION CLOSE */
+
+
+
+
+
+
+/* **************************************      INDEX 2 STYLING START     ****************** */
+
+.header-2 {
+    min-height: 90vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(img/tourism.jpg) center/cover repeat fixed;
+    color: #fff;
+}
+
+
+.ind-main {
+    width: 95%;
+    height: 85vh;
+    /*  background: green;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+
+.ind-section h3 {
+    font-size: 35px;
+    font-weight: 200;
+    letter-spacing: 3px;
+    text-shadow: 1px 1px 2px black;
+}
+
+.ind-section h1 {
+    margin: 30px 0 20px 0;
+    font-size: 55px;
+    font-weight: 700;
+    text-shadow: 2px 1px 5px black;
+    text-transform: uppercase;
+}
+
+.ind-section p {
+    font-size: 25px;
+    word-spacing: 2px;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 1px black;
+}
+
+.ind-section a {
+    padding: 12px 30px;
+    border-radius: 4px;
+    outline: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all .5s ease;
+}
+
+.ind-section .btnone {
+    background: #fff;
+    color: black;
+}
+
+.btnone:hover {
+    background: rgb(3, 62, 67);
+    color: white;
+}
+
+.ind-section .btntwo {
+    background: #00b894;
+    color: white;
+}
+
+.btntwo:hover {
+    background: rgb(2, 56, 57);
+    color: #fff;
+}
+
+.change_content:after {
+    content: '';
+    animation: changetext 10s infinite linear;
+    color: #00b894;
+}
+
+
+@keyframes changetext {
+    0% {
+        content: "Darjeeling";
+    }
+
+    20% {
+        content: "Agra";
+    }
+
+    35% {
+        content: "Jaipur";
+    }
+
+    60% {
+        content: "Kerla";
+    }
+
+    80% {
+        content: "Delhi";
+    }
+
+    100% {
+        content: "Mumbai";
+    }
+}
+
+.features {
+    margin: 3% 7%;
+}
+
+.features h1 {
+    text-align: center;
+    text-transform: capitalize;
+    margin: 2rem;
+}
+
+.features-rows {
+    display: flex;
+}
+
+.features-info {
+    width: 55%;
+}
+
+.features-img img {
+    width: 400px;
+    height: 240px;
+    border-radius: 10%;
+    padding-left: 20px;
+    padding-bottom: 25px;
+}
+
+/* **************************************      INDEX 2 STYLING END     ****************** */
+
+
+
+
+
+
+
+
+
+/* **************************************      INDEX 3 STYLING START     ****************** */
+.header-3 {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url("https://img.freepik.com/premium-vector/travel-tourism-with-famous-world-landmarks-globe_117404-24.jpg?w=1380") center/cover repeat fixed;
+    color: #fff;
+}
+
+.hero {
+    margin: 5% 6%;
+}
+
+.change_contents:after {
+    content: '';
+    animation: changetexts 10s infinite linear;
+    color: #00b894;
+}
+
+@keyframes changetexts {
+    0% {
+        content: "UAE";
+    }
+
+    13% {
+        content: "germany";
+    }
+
+    26% {
+        content: "usa";
+    }
+
+    39% {
+        content: "canada";
+    }
+
+    52% {
+        content: "singapore";
+    }
+
+    65% {
+        content: "poland";
+    }
+
+    78% {
+        content: "japan";
+    }
+
+    91% {
+        content: "france";
+    }
+
+    100% {
+        content: "egypt";
+    }
+}
+.cards img{
+    width: 250px;
+    height: 200px;
+}
+.cards-title{
+    text-align: center;
+    font-style: italic;
+    font-family: "dancing-script";
+    margin: 25px;
+}
+@media screen and (max-width: 990px) {
+   .cards img{
+    width: 150px;
+    height: 150px;
+   }
+}
+@media screen and (max-width: 770px) {
+   .cards-body .cards-title{
+    text-align: left;
+   }
+   .colns1{
+    display: flex;
+   }
+   .coln{
+    margin: 25px;
+   }
+}
+/* **************************************      INDEX 3 STYLING END     ****************** */
