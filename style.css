@@ -344,7 +344,11 @@ p {
     p {
         font-size: 15px;
     }
-
+    .about-content{
+        position: relative;
+        top: -14rem;
+    }
+    
 }
 
 /********************* End of Header ***********************/
@@ -532,7 +536,9 @@ video {
         position: relative;
         top: -2rem;
     }
-
+    .testimonail h1{
+        font-size: 2rem;
+    }
 }
 
 /* ***********************   ABOUT SECTION END *************************  */
@@ -914,6 +920,24 @@ ul li a {
     padding-left: 20px;
     padding-bottom: 25px;
 }
+@media screen and (max-width: 521px) {
+    .features-rows{
+        display: block;
+    }
+    .features-info{
+        width: 95%;
+    }
+}
+@media screen and (max-width: 430px) {
+    .features-img img{
+        width: 300px;
+    }
+}
+@media screen and (max-width: 330px) {
+    .features-img img{
+        width: 250px;
+    }
+}
 
 /* **************************************      INDEX 2 STYLING END     ****************** */
 
@@ -1005,5 +1029,15 @@ ul li a {
    .coln{
     margin: 25px;
    }
+   .hero .row2{
+    align-items: center;
+    justify-content: center;
+    padding-left: 15rem;
+   }
+}
+@media screen and (max-width: 500px) {
+    .hero .row2{
+        padding-left: 5rem;
+    }
 }
 /* **************************************      INDEX 3 STYLING END     ****************** */
