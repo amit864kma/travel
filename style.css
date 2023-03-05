@@ -344,7 +344,7 @@ p {
     p {
         font-size: 15px;
     }
-      
+
 }
 
 /********************* End of Header ***********************/
@@ -532,7 +532,8 @@ video {
         position: relative;
         top: -2rem;
     }
-    .testimonail h1{
+
+    .testimonail h1 {
         font-size: 2rem;
     }
 }
@@ -545,7 +546,7 @@ video {
 
 .why {
     min-height: 70vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url("https://img.freepik.com/free-vector/destination-concept-illustration_114360-453.jpg?size=626&ext=jpg&ga=GA1.2.1206796168.1675606870&semt=sph") center/cover repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url("https://img.freepik.com/free-vector/destination-concept-illustration_114360-453.jpg?size=626&ext=jpg&ga=GA1.2.1206796168.1675606870&semt=sph") center/cover no-repeat fixed;
     color: #fff;
 }
 
@@ -560,7 +561,10 @@ video {
 }
 
 .why-data h1 {
-    color: rgb(231, 130, 6);
+    /* color: rgb(231, 130, 6); */
+    /* font-weight: 600; */
+    /* font-size: 3rem; */
+    -webkit-text-stroke: 1px red;
 }
 
 /* WHY SECTION END  */
@@ -656,113 +660,86 @@ label {
 /* FOOTER SECTION START  */
 
 
-.footer {
-    width: 100%;
-
-    bottom: 0;
-    background: linear-gradient(to right, #00093c, #2d0b00);
-    color: var(--white);
-    padding: 100px 0 30px;
-    border-top-left-radius: 100px;
-    font-size: 13px;
-    line-height: 20px;
+.footer-container {
+    max-width: 1170px;
+    margin: auto;
 }
 
-.rows {
-    width: 85%;
-    margin: auto;
+.footer-row {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-between;
 }
 
-.coln {
-    flex-basis: 25%;
-    padding: 10px;
+.ul {
+    list-style: none;
 }
 
-.coln:nth-child(2),
-.coln:nth-child(3) {
-    flex-basis: 25%;
+.footer {
+    background-color: #24262b;
+    padding: 70px 0;
 }
 
-.logo {
-    width: 80px;
-    margin-bottom: 30px;
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
 }
 
-.coln h3 {
-    width: fit-content;
-    margin-bottom: 40px;
+.footer-col h4 {
+    font-size: 18px;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
     position: relative;
 }
 
-.email-id {
-    width: fit-content;
-    border-bottom: 1px solid #ccc;
-    margin: 20px 0;
-    text-decoration: none;
-    color: #ccc;
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
 }
 
-ul li {
-    list-style: none;
-    margin-bottom: 12px;
-
+.footer-col ul li:not(:last-child) {
+    margin: 10px;
 }
 
-ul li a {
-    text-decoration: none;
-    color: var(--white);
-}
-
-.form {
-    padding-bottom: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 50px;
-}
-
-.form .far {
-    font-size: 18px;
-    margin-right: 10px;
-
-}
-
-.form .input {
-    width: 100%;
-    background: transparent;
-    color: #ccc;
-    border: 0;
-    outline: none;
-}
-
-.form button {
-    background: transparent;
-    border: 0;
-    outline: none;
-    cursor: pointer;
-}
-
-.form button .fas {
+.footer-col ul li a {
     font-size: 16px;
-    color: #ccc;
+    text-transform: capitalize;
+    color: #fff;
+    font-weight: 300;
+    color: #bbb;
+    display: block;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
-.social-icons .fabs {
-    width: 40px;
+.footer-col ul li a:hover {
+    color: #fff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
     height: 40px;
-    border-radius: 50%;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
     text-align: center;
     line-height: 40px;
-    font-size: 20px;
-    color: var(--dark);
-    background: var(--white);
-    margin-right: 15px;
-    cursor: pointer;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #fff;
 }
 
 .amihr {
@@ -774,6 +751,20 @@ ul li a {
 
 .copyright {
     text-align: center;
+    color: #fff;
+    /* padding-bottom: -40px; */
+}
+@media (max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
 }
 
 /* FOOTER SECTION CLOSE */
@@ -916,21 +907,25 @@ ul li a {
     padding-left: 20px;
     padding-bottom: 25px;
 }
+
 @media screen and (max-width: 521px) {
-    .features-rows{
+    .features-rows {
         display: block;
     }
-    .features-info{
+
+    .features-info {
         width: 95%;
     }
 }
+
 @media screen and (max-width: 430px) {
-    .features-img img{
+    .features-img img {
         width: 300px;
     }
 }
+
 @media screen and (max-width: 330px) {
-    .features-img img{
+    .features-img img {
         width: 250px;
     }
 }
@@ -999,41 +994,53 @@ ul li a {
         content: "egypt";
     }
 }
-.cards img{
+
+.cards img {
     width: 250px;
     height: 200px;
 }
-.cards-title{
+
+.cards-title {
     text-align: center;
     font-style: italic;
     font-family: "dancing-script";
     margin: 25px;
 }
+
 @media screen and (max-width: 990px) {
-   .cards img{
-    width: 150px;
-    height: 150px;
-   }
+    .cards img {
+        width: 150px;
+        height: 150px;
+    }
 }
+
 @media screen and (max-width: 770px) {
-   .cards-body .cards-title{
-    text-align: left;
-   }
-   .colns1{
-    display: flex;
-   }
-   .coln{
-    margin: 25px;
-   }
-   .hero .row2{
-    align-items: center;
-    justify-content: center;
-    padding-left: 15rem;
-   }
+    .cards-body .cards-title {
+        text-align: left;
+    }
+
+    .colns1 {
+        display: flex;
+    }
+
+    .coln {
+        margin: 25px;
+    }
+
+    .hero .row2 {
+        align-items: center;
+        justify-content: center;
+        padding-left: 15rem;
+    }
+    .three-1{
+        display: inline-block;
+    }
 }
+
 @media screen and (max-width: 500px) {
-    .hero .row2{
+    .hero .row2 {
         padding-left: 5rem;
     }
 }
+
 /* **************************************      INDEX 3 STYLING END     ****************** */
